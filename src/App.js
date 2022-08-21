@@ -1,6 +1,25 @@
 
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
+import Greeter from './Components/Greeter/Greeter';
+import Incrementor from './Components/Incrementor/Incrementor';
+import About from './Components/About/About';
+
+
+const imgStyle = {
+  height: "500px ",
+  weight: " 200px",
+}
+const pStyle = {
+  textAlign: " center",
+  color: "rgb(255, 251, 0)",
+  fontWeight: "900",
+  fontSize: "20px",
+  background: "black",
+  marginBottom: "0px",
+}
 
 function App() {
   return (
@@ -12,13 +31,13 @@ function App() {
       <Routes>
 
         <Route path="home" element={<Home />} />
-        <Route path="about" element={<About />} />
+        
         <Route path="greeter" element={<Greeter />} />
         <Route path="incrementor" element={<Incrementor />} />
-        <Route path="movies" element={<Movies />}>
+        {/* <Route path="movies" element={<Movies />}>
           <Route path='top-10-movies' element={<Top10Movies />} />
           <Route path='worst-movies' element={<WorstMovies />} />
-        </Route>
+        </Route> */}
         {/* <Route path='todo-list' element={<TodoList/>}/> */}
         <Route path="*"
           element={
@@ -32,7 +51,7 @@ function App() {
             </main>
           }
         />
-        <Route path='calculator' element={
+        {/* <Route path='calculator' element={
           <Wrapper>
             <Screen value={calc.num ? calc.num : calc.res} />
             <ButtonBox>
@@ -65,7 +84,8 @@ function App() {
 
             </ButtonBox>
           </Wrapper>
-        } />
+        } /> */}
+        <Route path="about" element={<About />} />
 
       </Routes>
     </BrowserRouter>

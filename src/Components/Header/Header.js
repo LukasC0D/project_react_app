@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   return (
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
+            <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top mt-1 pe-2" />
             Awesome App</Link>
           <button className="navbar-toggler"
             type="button"

@@ -6,6 +6,9 @@ import Home from './Components/Home/Home';
 import Greeter from './Components/Greeter/Greeter';
 import Incrementor from './Components/Incrementor/Incrementor';
 import About from './Components/About/About';
+import ItemList from './Components/ItemList/ItemList';
+
+
 
 
 const imgStyle = {
@@ -38,7 +41,7 @@ function App() {
           <Route path='top-10-movies' element={<Top10Movies />} />
           <Route path='worst-movies' element={<WorstMovies />} />
         </Route> */}
-        {/* <Route path='todo-list' element={<TodoList/>}/> */}
+        <Route path='item-list' element={<ItemList/>}/>
         <Route path="*"
           element={
             <main style={{ padding: "1rem" }}>

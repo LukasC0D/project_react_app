@@ -44,8 +44,8 @@ function Header() {
               <NavLink className={({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"
               }
-                to="/movies">
-                Movies
+                to="/item-list">
+                Items App
               </NavLink>
   
               <NavLink className={({ isActive }) =>

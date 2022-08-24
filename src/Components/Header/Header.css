@@ -1,1 +1,14 @@
-.Header {}
+.newcolor .bg-light {
+    background-color: red;
+    color: blue;
+}
+Header{
+
+    background-color: black;
+    color: black;
+
+}
+
+.newcolor {
+    background: #000;
+}

@@ -9,16 +9,18 @@ let flexContainer = {
   justifyContent: "center",
 };
 
-let customW65 = {
-  width: "65%",
+let inputW = {
+  width: "270px",
 };
-let customW35 = {
-  width: "35%",
+let buttonW = {
+  width: "100px",
 };
 
 
 const ItemList = () => {
-  const [newItem, setNewItem] = useState({});
+  const [newItem, setNewItem] = useState({
+    name: ''
+  });
   const [items, setItems] = useState([]);
   const itemInput = useRef(null);
 
@@ -43,13 +45,14 @@ const ItemList = () => {
   };
 
   const handleClick = (e) => {
+    e.preventDefault()
     itemInput.current.value = "";
-    // don't allow empty values &
-    // repeated values by pressing "add" button
-    // by resetting the "newItem" variable
-    if (newItem.name !== "") {
+
+
+    console.log(newItem.name)
+    if (newItem.name !== '') {
       setItems([...items, newItem]);
-      setNewItem({ name: "" });
+      setNewItem({ name: '' })
     }
   };
 
@@ -57,19 +60,23 @@ const ItemList = () => {
     <div style={flexContainer}>
       <div className="card w-25 text-bg-light">
         <div className="card-body">
-          <h1 className="card-title">Items</h1>
+          <h2 className="text-center">Enter item name</h2>
           <div className="row p-3">
-            <input
-              id="input"
-              type="text"
-              className="form-control"
-              style={customW65}
-              ref={itemInput}
-              onChange={handleInput}
-            />
-            <button className="btn btn-secondary" style={customW35} onClick={handleClick}>
-              Add Item
-            </button>
+            <form onSubmit={handleClick}>
+              <input
+                id="input"
+                type="text"
+                className="form-control"
+                style={inputW}
+                ref={itemInput}
+                onChange={handleInput}
+                value={newItem.name}
+              />
+              <button className="btn btn-primary mt-2" style={buttonW}
+              >
+                Add Item
+              </button>
+            </form>
           </div>
           <ul className="list-group">
             {items.length > 0 ? (
@@ -77,13 +84,13 @@ const ItemList = () => {
                 <li key={idx} className="list-group-item">
                   {item.name}
                   {/* prettier-ignore */}
-                  <button className="btn btn-warning float-end" onClick={() => { deleteItem(idx); }}>
+                  <button className="btn btn-danger float-end" onClick={() => { deleteItem(idx); }}>
                     Delete
                   </button>
                 </li>
               ))
             ) : (
-              <div>No items found!</div>
+              <div className='ms-3 text-danger'>No items yet!</div>
             )}
           </ul>
         </div>

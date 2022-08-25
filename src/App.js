@@ -29,7 +29,7 @@ const App =() => {
 
       <Routes>
 
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         
         <Route path="greeter" element={<Greeter />} />
         <Route path="incrementor" element={<Incrementor />} />

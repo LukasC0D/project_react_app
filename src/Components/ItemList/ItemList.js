@@ -7,13 +7,14 @@ let flexContainer = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+
 };
 
 let inputW = {
-  width: "270px",
+  width: "100%",
 };
 let buttonW = {
-  width: "100px",
+  width: "35%",
 };
 
 
@@ -23,6 +24,7 @@ const ItemList = () => {
   });
   const [items, setItems] = useState([]);
   const itemInput = useRef(null);
+  const [itemErrorMsg, setItemErrorMsg] = useState("");
 
   useEffect(() => {
     const lsItems = localStorage.getItem("items");
@@ -46,7 +48,12 @@ const ItemList = () => {
 
   const handleClick = (e) => {
     e.preventDefault()
-    itemInput.current.value = "";
+  if ( itemInput.current.value === ""){
+    setItemErrorMsg("Title cannot be blank")
+    
+  } else{
+    setItemErrorMsg("")
+  }
 
 
     console.log(newItem.name)
@@ -54,15 +61,35 @@ const ItemList = () => {
       setItems([...items, newItem]);
       setNewItem({ name: '' })
     }
+    
   };
+
+  // if (newTitle === "") {
+  //   setItemErrorMsg("Can't leave the title blank");
+  // } else {
+  //   let updatedItems = JSON.stringify([...items, newTitle]);
+  //   localStorage.setItem("items", updatedItems);
+  //   setNewTitle("");
+  //   setItems([...items, newTitle]);
+  //   setItemErrorMsg("");
+  // }
+
+  {/* <div className="text-danger">{itemErrorMsg}</div> */}
+            {/* {itemErrorMsg ? <div className="text-danger">{itemErrorMsg}</div> : null} */}
+            // {itemErrorMsg && <div className="text-danger">{itemErrorMsg}</div>}
+
+
 
   return (
     <div style={flexContainer}>
-      <div className="card w-25 text-bg-light">
+      <div className="card w-25 text-bg-dark">
         <div className="card-body">
-          <h2 className="text-center">Enter item name</h2>
+          <h2 className="text-center text-white">Enter item name</h2>
           <div className="row p-3">
             <form onSubmit={handleClick}>
+
+            {itemErrorMsg && <div className="text-danger text-center pb-1">{itemErrorMsg}</div>}
+
               <input
                 id="input"
                 type="text"
@@ -81,16 +108,16 @@ const ItemList = () => {
           <ul className="list-group">
             {items.length > 0 ? (
               items.map((item, idx) => (
-                <li key={idx} className="list-group-item">
+                <li key={idx} className="list-group-item text-info">
                   {item.name}
                   {/* prettier-ignore */}
                   <button className="btn btn-danger float-end" onClick={() => { deleteItem(idx); }}>
-                    Delete
+                    X
                   </button>
                 </li>
               ))
             ) : (
-              <div className='ms-3 text-danger'>No items yet!</div>
+              <div className='ms-3 text-info'>No items yet!</div>
             )}
           </ul>
         </div>

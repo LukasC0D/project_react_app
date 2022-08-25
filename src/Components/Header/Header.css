@@ -1,14 +1,14 @@
-.newcolor .bg-light {
-    background-color: red;
-    color: blue;
-}
-Header{
-
-    background-color: black;
-    color: black;
-
-}
 
 .newcolor {
-    background: #000;
+    background: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+ }
+.newcolor a{
+    color: white;
+}
+
+.navbar{
+    --bs-navbar-hover-color:red;
+    --bs-navbar-brand-hover-color:red;
 }

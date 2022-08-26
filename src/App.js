@@ -23,7 +23,7 @@ const pStyle = {
 const App =() => {
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
 
       <Header />
 
@@ -48,7 +48,7 @@ const App =() => {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
 
 

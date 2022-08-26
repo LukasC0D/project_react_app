@@ -26,7 +26,7 @@ const Greeter = () => {
 
   return (
     <>
-      <div className='d-flex justify-content-center mt-3 danger'>
+      <div className='d-flex justify-content-center mt-5 danger'>
         <input
           style={{ display: "block" }}
           placeholder="What is your name?"

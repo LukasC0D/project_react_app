@@ -10,5 +10,15 @@
 
 .navbar{
     --bs-navbar-hover-color:red;
-    --bs-navbar-brand-hover-color:red;
+    --bs-navbar-brand-hover-color:rgb(255, 85, 85);
 }
+.list-group-item{
+    background-color: rgb(255, 220, 220);
+
+}
+
+.list-group-item p{
+    color: red;
+}
+
+

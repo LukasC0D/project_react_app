@@ -30,7 +30,6 @@ const ItemList = () => {
     const lsItems = localStorage.getItem("items");
     if (!lsItems) localStorage.setItem("items", JSON.stringify(items));
     else setItems(JSON.parse(lsItems));
-    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -55,7 +54,6 @@ const ItemList = () => {
     setItemErrorMsg("")
   }
 
-
     console.log(newItem.name)
     if (newItem.name !== '') {
       setItems([...items, newItem]);
@@ -63,21 +61,6 @@ const ItemList = () => {
     }
     
   };
-
-  // if (newTitle === "") {
-  //   setItemErrorMsg("Can't leave the title blank");
-  // } else {
-  //   let updatedItems = JSON.stringify([...items, newTitle]);
-  //   localStorage.setItem("items", updatedItems);
-  //   setNewTitle("");
-  //   setItems([...items, newTitle]);
-  //   setItemErrorMsg("");
-  // }
-
-  {/* <div className="text-danger">{itemErrorMsg}</div> */}
-            {/* {itemErrorMsg ? <div className="text-danger">{itemErrorMsg}</div> : null} */}
-            // {itemErrorMsg && <div className="text-danger">{itemErrorMsg}</div>}
-
 
 
   return (
@@ -88,7 +71,7 @@ const ItemList = () => {
           <div className="row p-3">
             <form onSubmit={handleClick}>
 
-            {itemErrorMsg && <div className="text-danger text-center pb-1">{itemErrorMsg}</div>}
+            {itemErrorMsg && <div className="text-danger text-center pb-1"><i>{itemErrorMsg}</i></div>}
 
               <input
                 id="input"
@@ -101,23 +84,30 @@ const ItemList = () => {
               />
               <button className="btn btn-primary mt-2" style={buttonW}
               >
-                Add Item
+                <strong>Add + </strong> 
               </button>
             </form>
           </div>
-          <ul className="list-group">
+          <ul style={{
+            width:"90%",
+            marginLeft:"15px",
+            border:"1px solid red",
+            }} className="list-group">
             {items.length > 0 ? (
               items.map((item, idx) => (
-                <li key={idx} className="list-group-item text-info">
+                <li key={idx} className="list-group-item text-primary"
+                style={{
+                borderBottom:"1px solid red",
+                }}
+                >
                   {item.name}
-                  {/* prettier-ignore */}
                   <button className="btn btn-danger float-end" onClick={() => { deleteItem(idx); }}>
-                    X
+                    <i style={{color:"black"}}>X</i>
                   </button>
                 </li>
               ))
             ) : (
-              <div className='ms-3 text-info'>No items yet!</div>
+              <div className='ms-3 text-info'><i>No items yet!</i></div>
             )}
           </ul>
         </div>

@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Greeter from './Components/Greeter/Greeter';

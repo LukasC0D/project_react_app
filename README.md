@@ -16,10 +16,10 @@ This project will run on GitHub Pages!
 
 But if you want to have it on your pc , please don`t hesitate to:
 
--Download or clone it from GitHub via GitBash
--open with Visual Studio Code
--run npm install
--run npm start
+## Download or clone it from GitHub via GitBash
+### open with Visual Studio Code
+### run npm install
+### run npm start
 
 HAVE FUN!!!
 

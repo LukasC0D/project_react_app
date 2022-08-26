@@ -20,5 +20,14 @@
 .list-group-item p{
     color: red;
 }
+.navbar-toggler-icon{
+    background-color: rgb(255, 28, 28);
+    border-radius: 5px;
+    
+}
+.navbar-toggler-icon:hover{
+    background-color: rgb(255, 128, 121);
+   
+}
 
 

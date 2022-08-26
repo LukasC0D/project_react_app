@@ -14,9 +14,6 @@ const Button = ({thisId, text, color, handleCallback}) => (
 
 );
 
-
-
-
 const Greeter = () => {
 
 
@@ -39,31 +36,19 @@ const Greeter = () => {
           }}
           className={"inputBox"}
         />
-        {/* <button
-      style={{display:"block"}}
-      onClick={() =>
-        name.length > 0 ? setShowGreet(!showGreet) : null
-      }
-      >
-       {showGreet ? "Slėpti" : "Rodyti"}
-      </button> */}
+   
         <Button
           color={showGreet ? (name.value.length > 5 ? "red" : "green") : "blue"}
           text={showGreet ? "Hide" : "Show"}
           handleCallback={() => (name.value.length >= 0 ? setShowGreet(!showGreet) : null)}
-        //  handleCallback={() =>
-        //   name.value !== "" && name.wasCleared === false
-        //   ? setShowGreet(!showGreet)
-        //   : name.value === "" && name.wasCleared === true && showGreet === true
-        //   ? (setShowGreet(showGreet), (name.wasCleared = false))
-        //   : null
-        // }
         />
 
       </div>
       <div className='d-flex justify-content-center mt-3'>
         <label style={{ display: "block" }}>
-          {showGreet ? `Welcome  ${name.value}  :)  ` : ""}
+          <strong style={{
+            fontSize:"25px"
+          }}>{showGreet ? `Welcome  ${name.value}  !!! :) ` : ""}</strong>
         </label>
       </div>
 

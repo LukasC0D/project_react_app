@@ -10,19 +10,18 @@ This is a Simple webpage App where you can find 3 different app`s Greeter/Increm
 
 I used HTML , CSS , JavaScript and  REACT!!!  
 
-#### Setup & How to run 
+## Setup & How to run 
 
 This project will run on GitHub Pages! 
 
 But if you want to have it on your pc , please don`t hesitate to:
 
-## Download or clone it from GitHub via GitBash
-### open with Visual Studio Code
-### run npm install
-### run npm start
+### Download or clone it from GitHub via GitBash
+### Open with Visual Studio Code
+### Run npm install
+### Run npm start
 
-HAVE FUN!!!
-
+# HAVE FUN!!!
 
 ##### Status 
 

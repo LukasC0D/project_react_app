@@ -4,7 +4,7 @@ import './About.css';
 
 
 const About = () => (
-  <div className="text-center mt-5">
+  <div className="text-center mt-5 boxCenter">
 
     <h1>About Component</h1>
     <br/>

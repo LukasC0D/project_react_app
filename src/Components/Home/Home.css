@@ -8,3 +8,9 @@
 .V{
      color: azure;
 }
+.floatName{
+     position: absolute;
+     top: 100%;
+     left:90%;
+     transform: translate(-50%, -50%);
+}

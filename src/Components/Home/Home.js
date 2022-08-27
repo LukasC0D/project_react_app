@@ -18,14 +18,17 @@ const Home = () => {
         >React</i></strong> app.
           <br />
           <br />
-          <p style={{
-            color: "green",
-            margin: "10px",
-            fontWeight: "500"
-          }}
-          >By Lukas.<strong style={{
-            color: "rgb(0, 208, 245)"
-          }}><i>K</i></strong></p>
+          <div className='floatName'>
+            <p style={{
+              color: "green",
+              margin: "10px",
+              fontWeight: "500",
+              fontSize:"30px",
+            }}
+            >By Lukas.<strong style={{
+              color: "rgb(0, 208, 245)"
+            }}><i>K</i></strong></p>
+          </div>
 
 
         </div>

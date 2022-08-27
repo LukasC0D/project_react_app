@@ -13,7 +13,7 @@ const Home = () => {
         >Welcome to my <strong><i style={{
           color: "rgb(0, 208, 245)"
         }}
-        >React</i></strong> app.
+        >React</i></strong>app.
           <br />
           <br />
           <p style={{
@@ -21,12 +21,10 @@ const Home = () => {
             margin: "10px",
             fontWeight: "500"
           }}
-          >You can Navigate through pages.</p>
-          <br />
-          <p style={{
-            color: "red"
-          }}
-          >Enjoy!</p>
+          >By Lukas.<strong style={{
+            color: "rgb(0, 208, 245)"
+          }}><i>K</i></strong></p>
+
         </div>
       </div>
 

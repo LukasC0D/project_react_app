@@ -13,7 +13,7 @@ const Home = () => {
         >Welcome to my <strong><i style={{
           color: "rgb(0, 208, 245)"
         }}
-        >React</i></strong>app.
+        >React</i></strong> app.
           <br />
           <br />
           <p style={{

@@ -1,28 +1,29 @@
 # Project Title
 
-Hello and welcome to Practical Project 5.
+Welcome to  Practical Project 5.
 
 ## About The App
 
-This is a Simple webpage App where you can find 3 different app`s Greeter/Incrementor/Todo-Items-App  . Try them and have fun!
+This is a website built on  React. 
 
 ### Technologies 
 
-I used HTML , CSS , JavaScript and  REACT!!!  
+HTML , CSS , JavaScript and Ract. 
 
 ## Setup & How to run 
 
-This project will run on GitHub Pages! 
+This project is published on GitHub Pages. 
 
-But if you want to have it on your pc , please don`t hesitate to:
+Also you can,
 
 ### Download or clone it from GitHub via GitBash
 ### Open with Visual Studio Code
 ### Run npm install
 ### Run npm start
 
-# HAVE FUN!!!
-
 ##### Status 
 
-This project is COMPLETED!
+Complete.
+
+# HAVE FUN :)
+

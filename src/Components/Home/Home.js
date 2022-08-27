@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.css';
 
+
+
 const Home = () => {
   return (
     <>
@@ -24,6 +26,7 @@ const Home = () => {
           >By Lukas.<strong style={{
             color: "rgb(0, 208, 245)"
           }}><i>K</i></strong></p>
+
 
         </div>
       </div>

@@ -9,6 +9,7 @@ import About from './Components/About/About';
 import ItemList from './Components/ItemList/ItemList';
 import Image from './Components/Images/error.jpg'
 import Footer from './Components/Footer/Footer';
+import logo from './logo.svg'
 
 
 
@@ -53,6 +54,9 @@ const App =() => {
 
     <Footer/>
 
+        <div>
+         <img style={{}} src={logo} className="App-logo" alt="logo" />
+        </div>
 
 
   </>

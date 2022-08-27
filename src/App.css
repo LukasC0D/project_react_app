@@ -1,6 +1,26 @@
-.App {
-    background-image: url(/src/Components/Images/cover.jpg);
-    position: absolute;
 
-}
+  .App-logo {
+    height: 15vmin;
+    position: fixed;
+    top: 84%;
+    left: 46%;
+    transform: translate(-50%, -50%);
 
+
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 6s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

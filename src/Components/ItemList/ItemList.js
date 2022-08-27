@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './ItemList.css';
 
 let flexContainer = {
-  height: "100vh",
+  height: "80vh",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

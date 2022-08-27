@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Greeter/Button.css"
+import "./Greeter/Button.css";
 
 
 const Button = ({thisId, text, color, handleCallback}) => (

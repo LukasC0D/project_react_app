@@ -7,7 +7,6 @@ const Button = ({thisId, text, color, handleCallback}) => (
   id={thisId} 
   onClick={() => {handleCallback()}} 
   style= {{color:color}}
-  className="borderRadius"
   >
   {text} 
   </button>

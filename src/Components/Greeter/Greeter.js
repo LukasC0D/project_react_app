@@ -24,7 +24,8 @@ const Greeter = () => {
   return (
     <>
       <div className='flexBox'>
-        <div style={{fontSize:"25px"}} className='d-flex justify-content-center mt-5'>
+        <div style={{fontSize:"25px"}} 
+             className='d-flex justify-content-center mt-5'>
           <input
             style={{ display: "block" ,borderRadius:"5px"  }}
             placeholder="What is your name?"

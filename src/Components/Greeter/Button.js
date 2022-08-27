@@ -1,12 +1,13 @@
 import React from 'react';
+import "./Greeter/Button.css"
 
-import './Button.css';
 
 const Button = ({thisId, text, color, handleCallback}) => (
   <button 
   id={thisId} 
   onClick={() => {handleCallback()}} 
   style= {{color:color}}
+  className="borderRadius"
   >
   {text} 
   </button>

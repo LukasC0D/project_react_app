@@ -23,9 +23,9 @@ const Greeter = () => {
 
   return (
     <>
-      <div className='d-flex justify-content-center mt-5 danger'>
+      <div style={{fontSize:"25px"}} className='d-flex justify-content-center mt-5'>
         <input
-          style={{ display: "block" }}
+          style={{ display: "block" ,borderRadius:"5px"  }}
           placeholder="What is your name?"
           onKeyUp={(e) => {
             setName({
@@ -34,19 +34,20 @@ const Greeter = () => {
                 ? true : false
             })
           }}
-          className={"inputBox"}
+          className={"me-2"}
         />
    
         <Button
           color={showGreet ? (name.value.length > 5 ? "red" : "green") : "blue"}
           text={showGreet ? "Hide" : "Show"}
           handleCallback={() => (name.value.length >= 0 ? setShowGreet(!showGreet) : null)}
+          
         />
 
       </div>
       <div className='d-flex justify-content-center mt-3'>
         <label style={{ display: "block" }}>
-          <strong style={{
+          <strong className='text-white' style={{
             fontSize:"25px"
           }}>{showGreet ? `Welcome  ${name.value}  !!! :) ` : ""}</strong>
         </label>

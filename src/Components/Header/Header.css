@@ -12,14 +12,8 @@
     --bs-navbar-hover-color:red;
     --bs-navbar-brand-hover-color:rgb(255, 85, 85);
 }
-.list-group-item{
-    background-color: rgb(255, 220, 220);
 
-}
 
-.list-group-item p{
-    color: red;
-}
 .navbar-toggler-icon{
     background-color: rgb(255, 28, 28);
     border-radius: 5px;
@@ -29,5 +23,11 @@
     background-color: rgb(255, 128, 121);
    
 }
+.list-group-item{
+    background-color: rgb(255, 220, 220);
 
+}
 
+.v{
+    color: rgb(0, 208, 245);
+}

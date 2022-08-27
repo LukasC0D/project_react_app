@@ -47,19 +47,19 @@ const ItemList = () => {
 
   const handleClick = (e) => {
     e.preventDefault()
-  if ( itemInput.current.value === ""){
-    setItemErrorMsg("Title cannot be blank")
-    
-  } else{
-    setItemErrorMsg("")
-  }
+    if (itemInput.current.value === "") {
+      setItemErrorMsg("Title cannot be blank")
+
+    } else {
+      setItemErrorMsg("")
+    }
 
     console.log(newItem.name)
     if (newItem.name !== '') {
       setItems([...items, newItem]);
       setNewItem({ name: '' })
     }
-    
+
   };
 
 
@@ -68,10 +68,10 @@ const ItemList = () => {
       <div className="card w-25 text-bg-dark">
         <div className="card-body">
           <h2 className="text-center text-white">Enter item name</h2>
-          <div className="row p-3">
+          <div className="row p-3 ">
             <form onSubmit={handleClick}>
 
-            {itemErrorMsg && <div className="text-danger text-center pb-1"><i>{itemErrorMsg}</i></div>}
+              {itemErrorMsg && <div className="text-danger text-center pb-1"><i>{itemErrorMsg}</i></div>}
 
               <input
                 id="input"
@@ -84,25 +84,25 @@ const ItemList = () => {
               />
               <button className="btn btn-primary mt-2" style={buttonW}
               >
-                <strong>Add + </strong> 
+                <strong>Add+</strong>
               </button>
             </form>
           </div>
           <ul style={{
-            width:"90%",
-            marginLeft:"15px",
-            border:"1px solid red",
-            }} className="list-group">
+            width: "80%",
+            marginLeft: "10%",
+
+          }} className="list-group">
             {items.length > 0 ? (
               items.map((item, idx) => (
                 <li key={idx} className="list-group-item text-primary"
-                style={{
-                borderBottom:"1px solid red",
-                }}
+                  style={{
+                    borderBottom: "1px solid red",
+                  }}
                 >
                   {item.name}
                   <button className="btn btn-danger float-end" onClick={() => { deleteItem(idx); }}>
-                    <i style={{color:"black"}}>X</i>
+                    <i style={{ color: "black" }}>X</i>
                   </button>
                 </li>
               ))

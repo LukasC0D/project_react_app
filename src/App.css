@@ -1,16 +1,50 @@
 
-  .App-logo {
-    height: 15vmin;
+  .Flex-center {
+    height: 17vmin;
     position: fixed;
-    top: 84%;
-    left: 46%;
+    top: 82.5%;
+    left: 42%;
     transform: translate(-50%, -50%);
 
 
   }
+  .Flex-start{
+    height: 15vmin;
+    position: fixed;
+    top: 84.5%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .Flex-end{
+    height: 15vmin;
+    position: fixed;
+    top: 84.5%;
+    right: 0;
+    transform: translate(-50%, -50%);
+ 
+
+  }
+  
+
   
   @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
+    .Flex-center {
+      animation: App-logo-spin infinite 4s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .Flex-start {
       animation: App-logo-spin infinite 6s linear;
     }
   }
@@ -23,4 +57,21 @@
       transform: rotate(360deg);
     }
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .Flex-end {
+      animation: App-logo-spin infinite 2s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
   

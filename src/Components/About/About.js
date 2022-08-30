@@ -10,7 +10,7 @@ const About = () => (
     <br/>
     <p style={{
       color:"white"
-    }}>Always In Progress...</p>
+    }}>To be continued...</p>
 
     
   </div>

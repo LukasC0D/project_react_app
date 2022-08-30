@@ -25,6 +25,7 @@ const ItemList = () => {
   const [items, setItems] = useState([]);
   const itemInput = useRef(null);
   const [itemErrorMsg, setItemErrorMsg] = useState("");
+  const [editInput, setEditInput] = useState("")
 
   useEffect(() => {
     const lsItems = localStorage.getItem("items");
@@ -44,6 +45,24 @@ const ItemList = () => {
   const handleInput = (e) => {
     setNewItem({ name: e.target.value });
   };
+
+  const handleEdit = (idx) => {
+    const editedItems = JSON.parse(localStorage.getItem("items"));
+    editedItems[idx].edited = true;
+    setItems(editedItems);
+    setEditInput(items[idx].name);
+  }
+
+  const submitEdit = (idx) => {
+    if (editInput !== "") {
+      const editedItems = JSON.parse(localStorage.getItem("items"));
+      editedItems[idx] = { name: editInput, edited: false };
+      setItems(editedItems)
+    }
+  }
+  const handleEditInput = (e) => {
+    setEditInput(e.target.value);
+  }
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -67,8 +86,8 @@ const ItemList = () => {
     <div style={flexContainer}>
       <div className="card w-25 text-bg-dark">
         <div className="card-body">
-          <h2 className="text-center text-white">Enter item name</h2>
-          <div className="row p-3 ">
+          <h2 className="text-center h2Mt text-white">Enter item name</h2>
+          <div className="row p-5 ">
             <form onSubmit={handleClick}>
 
               {itemErrorMsg && <div className="text-danger text-center pb-1"><i>{itemErrorMsg}</i></div>}
@@ -88,28 +107,54 @@ const ItemList = () => {
               </button>
             </form>
           </div>
-          <ul style={{
-            width: "80%",
-            marginLeft: "10%",
+          <div >
+            <ul style={{
+              width: "80%",
+              marginLeft: "10%",
+            }} className="list-group">
+              {items.length > 0 ? (
+                items.map((item, idx) => (
+                  <li key={idx} className="list-group-item text-primary"
+                    style={{
+                      borderBottom: "1px solid red",
+                    }}
+                  >
+                    <div>
 
-          }} className="list-group">
-            {items.length > 0 ? (
-              items.map((item, idx) => (
-                <li key={idx} className="list-group-item text-primary"
-                  style={{
-                    borderBottom: "1px solid red",
-                  }}
-                >
-                  {item.name}
-                  <button className="btn btn-danger float-end" onClick={() => { deleteItem(idx); }}>
-                    <i style={{ color: "black" }}>X</i>
-                  </button>
-                </li>
-              ))
-            ) : (
-              <div className='ms-3 text-info'><i>No items yet!</i></div>
-            )}
-          </ul>
+                      <div className=" d-flex justify-content-end">
+                        <div className='fixBoxI'>
+                          {item.edited ? (
+                            <input
+                              type="text"
+                              value={editInput}
+                              onChange={
+                                handleEditInput}
+                            />) : (
+                            <div className='fixBox'>{item.name}</div>
+                          )}
+                        </div>
+                        <div>
+                          <button className='btn btn-danger' onClick={() => {
+                            !item.edited ? handleEdit(idx) : submitEdit(idx);
+                          }}>
+                            {!item.edited ? "Edit" : "Submit"}
+                          </button>
+                        </div>
+                        <div className='marginLeft'>
+                          <button className="btn btn-danger" onClick={() => { deleteItem(idx); }}>
+                            <i>X</i>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </li>
+                ))
+              ) : (
+                <div className='ms-3 text-info'><i>No items yet!</i></div>
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

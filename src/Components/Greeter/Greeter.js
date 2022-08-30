@@ -24,7 +24,7 @@ const Greeter = () => {
   return (
     <>
       <div className='flexBox'>
-        <div style={{fontSize:"25px"}} 
+        <div style={{fontSize:"125%"}} 
              className='d-flex justify-content-center mt-5'>
           <input
             style={{ display: "block" ,borderRadius:"5px"  }}

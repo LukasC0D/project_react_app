@@ -6,3 +6,23 @@
     background-color: rgb(255, 244, 244);
 
 }
+.marginLeft{
+    margin-left: 10px;
+}
+
+.fixBoxI input{
+    position: relative;
+    top: 5px;
+    width: 80%;
+    border-radius: 5px;
+}
+.fixBox{
+    position: fixed;
+    left: 42%;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.h2Mt{
+    position: relative;
+    top: 20px;
+}

@@ -8,24 +8,24 @@ const Home = () => {
     <>
       <div className='marginTop'>
         <div style={{
-          color: "yellow",
+          color: "white",
           margin: "10px"
         }}
           className="Home text-center mt-5" data-testid="Home"
-        >Welcome to my <strong><i style={{
+        >Welcome to  <strong><i style={{
           color: "rgb(0, 208, 245)"
         }}
-        >React</i></strong> app.
+        >Cube</i></strong> 
           <br />
           <br />
           <div className='floatName'>
             <p style={{
-              color: "green",
+              color: "white",
               margin: "10px",
               fontWeight: "500",
-              fontSize:"30px",
+              fontSize:"15px",
             }}
-            >By Lukas.<strong style={{
+            >Designed by Lukas.<strong style={{
               color: "rgb(0, 208, 245)"
             }}><i>K</i></strong></p>
           </div>

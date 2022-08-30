@@ -55,7 +55,17 @@ const App =() => {
     <Footer/>
 
         <div>
-         <img style={{}} src={logo} className="App-logo" alt="logo" />
+         <img src={logo} className="Flex-center" alt="logo" />
+        </div>
+
+        
+        <div>
+         <img src={logo} className="Flex-start" alt="logo1" />
+        </div>
+
+        
+        <div>
+         <img src={logo} className="Flex-end" alt="logo2" />
         </div>
 
 

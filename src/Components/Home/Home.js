@@ -12,10 +12,7 @@ const Home = () => {
           margin: "10px"
         }}
           className="Home text-center mt-5" data-testid="Home"
-        >Welcome to  <strong><i style={{
-          color: "rgb(0, 208, 245)"
-        }}
-        >Cube</i></strong> 
+        >Welcome
           <br />
           <br />
           <div className='floatName'>
